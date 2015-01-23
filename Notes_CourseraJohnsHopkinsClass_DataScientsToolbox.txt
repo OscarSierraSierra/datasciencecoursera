@@ -1,0 +1,78 @@
+---------- Git ----------------
+git_bash (only on Windows - use Terminal Application on Mac)
+git config --global user.name "Oscar Sierra Sierra"
+git config --global user.email "billbruns@yahoo.com"
+git config --list
+---------GitHub---------------------------
+https://github.com/OscarSierraSierra
+or 
+https://github.com/new
+--- local repository
+>gitbash
+mkdir ~/datasciencecoursera
+cd ~/datasciencecoursera
+git init
+git remote add origin https://github.com/OscarSierraSierra/datasciencecoursera.git
+To fork another user's repo, use the Fork button on GitHub.
+To make a local copy of your GitHub repo,
+git clone https://github.com/OscarSierraSierra/datasciencecoursera.git
+See these references:
+https://help.github.com/articles/fork-a-repo
+https://git-scm.com/book/en/Git-Basics-Getting_a-Git-Repository
+-----------
+Markdown
+".md" ending, or click MD button in RStudio
+
+## Secondary Heading
+### Tertiary Heading
+
+Use "*" for unordered lists as in
+* first line
+* second line
+* third line
+
+Intro to Markdown at
+http://daringfireball.net/projects/markdown/
+R markdown - not needed until the Reproducible Research class
+http://www.rstudio.com/de/docs/authoring/using_markdown
+
+---------------------------------
+Installing R Packages
+
+Two places to get R packages from: CRAN or Bioconductor Project
+
+Obtaining from CRAN:
+a<-available.packages()
+head(rownames(a),3)
+-- 5200 packages
+-- use Task Views link if you don't know the package name
+install.packages(c("slidify","ggplot2")
+
+Obtaining from the Bioconductor Project:
+source("http://bioconductor.org/biocLite.R")
+biocLite(c("GenomicFeatures", "AnnotationData"))
+
+After these:
+library(ggplot2)
+- must load with library() the dependencies first.
+search() - lists functions
+
+?Does biocLite() also load the packages?
+?Does TaskView include packages from Bioconductor?
+-------------------
+INSTALLING RTOOLS
+- a set of tools necessary for building R packages on Windows
+Download the version corresponding to your version of R from
+http://cran.r-project.org/bin/windows/Rtools/
+Version of R seen when starting R(Studio?)
+R version 3.1.2 (2014-10-31) -- "Pumpkin Helmet"
+
+If Cygwin is already installed, just follow the directions.
+Insure "edit my path" when installing rtools.
+find.packages("devtools")
+install("devtools")
+-"The downloaded binary packages are in
+C:\Users\Bill\AppData\Local\Temp\RtmpwFuiAq\downloaded_packages"
+
+library(detools)
+find_rtools() should return TRUE
